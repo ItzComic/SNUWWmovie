@@ -1,7 +1,7 @@
 services:
-  supernatural-movie-site:
-    image: nginx:alpine
-    container_name: supernatural-movie-site
+  snuww-sighting-archive:
+    image: ghcr.io/itzcomic/snuwwmovie:latest
+    container_name: snuww-sighting-archive
     restart: unless-stopped
     ports:
       - "8088:80"
