@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supernatural Movie Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mist"></div>
+  <header class="hero">
+    <p class="eyebrow">Archive 013</p>
+    <h1>Supernatural Movie Vault</h1>
+    <p class="subtext">Curated films about hauntings, cursed towns, rituals, and things better left unseen.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Featured Titles</h2>
+        <p>These cards are generated from <code>movies.yaml</code>.</p>
+      </div>
+      <div id="movie-grid" class="movie-grid"></div>
+    </section>
+
+    <aside class="panel side-panel">
+      <h2>How To Edit</h2>
+      <ol>
+        <li>Open <code>movies.yaml</code>.</li>
+        <li>Add, remove, or change entries under <code>movies</code>.</li>
+        <li>Save and refresh this page.</li>
+      </ol>
+      <p class="note">Each movie supports: title, year, rating, subgenre, mood, and summary.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Built as a simple static site for easy domain hosting.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

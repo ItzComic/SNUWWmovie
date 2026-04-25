@@ -1,0 +1,31 @@
+site:
+  title: "Supernatural Movie Vault"
+
+movies:
+  - title: "The Witch"
+    year: 2015
+    rating: "R"
+    subgenre: "Folk Horror"
+    mood: "Dreadful, Slow Burn"
+    summary: "A family at the edge of a cursed forest begins to unravel as paranoia and occult forces close in."
+
+  - title: "Hereditary"
+    year: 2018
+    rating: "R"
+    subgenre: "Occult Horror"
+    mood: "Traumatic, Unnerving"
+    summary: "A grieving family uncovers a ritualistic legacy tied to their bloodline and a hidden cult."
+
+  - title: "The Conjuring"
+    year: 2013
+    rating: "R"
+    subgenre: "Haunted House"
+    mood: "Intense, Paranormal"
+    summary: "Paranormal investigators face a malicious spirit tormenting a family in an isolated farmhouse."
+
+  - title: "The Others"
+    year: 2001
+    rating: "PG-13"
+    subgenre: "Gothic Ghost Story"
+    mood: "Elegant, Chilling"
+    summary: "A mother and her children live in darkness while strange signs suggest they are not alone."
