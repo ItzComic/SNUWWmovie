@@ -17,8 +17,8 @@
   <!-- Header: Archive title -->
   <header class="archive-header">
     <div class="header-content">
-      <p class="archive-label">-- WHITEWATER SIGHTING ARCHIVE --</p>
-      <h1>THE PHANTOM OF THE TRAILS</h1>
+      <p class="archive-label">-- Slasher Sightings --</p>
+      <h1>THE SUPER NATURAL OF WHITWATER</h1>
       <p class="archive-date">Last Updated: [REDACTED]</p>
     </div>
   </header>
@@ -30,6 +30,14 @@
     <aside class="sightings-sidebar">
       <div class="sidebar-box">
         <h2 class="sidebar-title">RECENT SIGHTINGS</h2>
+        <!-- 
+          DIRECTOR: To add a new sighting, copy & paste this template:
+          <li class="sighting-item">
+            <span class="sighting-date">YYYY-MM-DD</span>
+            <span class="sighting-text">Location Description</span>
+          </li>
+          Keep sightings in chronological order (newest first).
+        -->
         <ul class="sighting-list" id="sighting-list">
           <li class="sighting-item">
             <span class="sighting-date">2024-10-15</span>
@@ -38,6 +46,10 @@
           <li class="sighting-item">
             <span class="sighting-date">2024-09-28</span>
             <span class="sighting-text">Starin Park, Dusk</span>
+          </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-09-14</span>
+            <span class="sighting-text">Whitewater Lake Shore</span>
           </li>
           <li class="sighting-item">
             <span class="sighting-date">2024-08-12</span>
@@ -51,12 +63,16 @@
             <span class="sighting-date">2024-06-21</span>
             <span class="sighting-text">Whitewater Woods</span>
           </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-05-30</span>
+            <span class="sighting-text">[Redacted]</span>
+          </li>
         </ul>
       </div>
 
       <div class="sidebar-box warning-box">
         <h3>⚠ WARNING</h3>
-        <p>Do not approach the figure. Witnessing speeds exceed documented norms. Report sightings to Campus Security immediately.</p>
+        <p>Do not approach the figure. Witnessing speeds exceed documented norms. Report sightings to {AUTHORIZED PERSONNEL ONLY}.</p>
       </div>
     </aside>
 
@@ -70,17 +86,17 @@
         <div class="lore-text">
           <h3>Origins: The Second Salem</h3>
           <p>
-            Whitewater has always harbored darkness beneath its suburban facade. In the 1930s, the town earned a sinister reputation as the "Second Salem"—a place where strange accidents befell outsiders and whispers of occult activity lingered in the Miller family estates.
+            FILLER TEXT: The town of Whitewater, Wisconsin, has long been shrouded in mystery. Local folklore speaks of a "Second Salem," a place where dark forces are said to have taken root. The earliest recorded incident dates back to 1933 when three children disappeared from the Miller Estate, only to be found days later in Whitewater Woods with no memory of their ordeal. This event marked the beginning of a series of unexplained phenomena that would plague the area for decades.
           </p>
 
           <h3>The Phantom</h3>
           <p>
-            Reported sightings began in 2018. Witnesses describe a figure moving with inhuman speed along the local trails, particularly near Starin Park and the Miller Memorial Grounds. The entity does not appear in daylight. The figure's features remain obscured, though accounts mention "white cloth" and "an absence where the eyes should be."
+            FILLER TEXT: Reported sightings began in 2018. Witnesses describe a figure moving with inhuman speed along the local trails, particularly near Starin Park and the Miller Memorial Grounds. The entity does not appear in daylight. The figure's features remain obscured, though accounts mention "white cloth" and "an absence where the eyes should be."
           </p>
 
           <h3>Pattern Recognition</h3>
           <p>
-            Incidents cluster around autumn equinox and summer solstice. Campus security reports an uptick in student disappearances during these periods. The common factor: all missing students were last seen near the trails. All exhibits signs of acute psychological distress before vanishing.
+            FILLER TEXT: Incidents cluster around autumn equinox and summer solstice. Campus security reports an uptick in student disappearances during these periods. The common factor: all missing students were last seen near the trails. All exhibits signs of acute psychological distress before vanishing.
           </p>
         </div>
       </div>
@@ -123,5 +139,35 @@
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <script src="app.js"></script>
+  
+  <!-- GLITCH EFFECT TOGGLE (every 30-60 seconds) -->
+  <script>
+    // Enable glitch effect toggle - set to true/false here
+    const ENABLE_GLITCH = true;
+    
+    if (ENABLE_GLITCH) {
+      function toggleGlitch() {
+        const body = document.body;
+        body.classList.add('glitch-active');
+        
+        // Remove glitch after 200ms
+        setTimeout(() => {
+          body.classList.remove('glitch-active');
+        }, 200);
+      }
+      
+      function scheduleNextGlitch() {
+        // Random interval between 30-60 seconds
+        const delay = Math.random() * 30000 + 30000;
+        setTimeout(() => {
+          toggleGlitch();
+          scheduleNextGlitch(); // Schedule the next one
+        }, delay);
+      }
+      
+      // Start the glitch cycle when page loads
+      scheduleNextGlitch();
+    }
+  </script>
 </body>
 </html>
