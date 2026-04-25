@@ -3,42 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Supernatural Movie Vault</title>
+  <title>Whitewater Sighting Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Typewriter/Terminal fonts for that creepy archive feel -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="mist"></div>
-  <header class="hero">
-    <p class="eyebrow">Archive 013</p>
-    <h1>Supernatural Movie Vault</h1>
-    <p class="subtext">Curated films about hauntings, cursed towns, rituals, and things better left unseen.</p>
+  <!-- CRT Scanline overlay -->
+  <div class="scanlines"></div>
+  
+  <!-- Header: Archive title -->
+  <header class="archive-header">
+    <div class="header-content">
+      <p class="archive-label">-- WHITEWATER SIGHTING ARCHIVE --</p>
+      <h1>THE PHANTOM OF THE TRAILS</h1>
+      <p class="archive-date">Last Updated: [REDACTED]</p>
+    </div>
   </header>
 
-  <main class="layout">
-    <section class="panel">
-      <div class="panel-heading">
-        <h2>Featured Titles</h2>
-        <p>These cards are generated from <code>movies.yaml</code>.</p>
+  <!-- Main Layout: Sidebar + Content -->
+  <main class="archive-layout">
+    
+    <!-- SIDEBAR: Recent Sightings -->
+    <aside class="sightings-sidebar">
+      <div class="sidebar-box">
+        <h2 class="sidebar-title">RECENT SIGHTINGS</h2>
+        <ul class="sighting-list" id="sighting-list">
+          <li class="sighting-item">
+            <span class="sighting-date">2024-10-15</span>
+            <span class="sighting-text">Trail Near Miller Beach</span>
+          </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-09-28</span>
+            <span class="sighting-text">Starin Park, Dusk</span>
+          </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-08-12</span>
+            <span class="sighting-text">Campus Perimeter</span>
+          </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-07-04</span>
+            <span class="sighting-text">Old Miller Grounds</span>
+          </li>
+          <li class="sighting-item">
+            <span class="sighting-date">2024-06-21</span>
+            <span class="sighting-text">Whitewater Woods</span>
+          </li>
+        </ul>
       </div>
-      <div id="movie-grid" class="movie-grid"></div>
+
+      <div class="sidebar-box warning-box">
+        <h3>⚠ WARNING</h3>
+        <p>Do not approach the figure. Witnessing speeds exceed documented norms. Report sightings to Campus Security immediately.</p>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT: The Legend -->
+    <section class="legend-content">
+      
+      <!-- LORE Section -->
+      <div class="content-box lore-section">
+        <h2 class="section-title">THE LEGEND</h2>
+        
+        <div class="lore-text">
+          <h3>Origins: The Second Salem</h3>
+          <p>
+            Whitewater has always harbored darkness beneath its suburban facade. In the 1930s, the town earned a sinister reputation as the "Second Salem"—a place where strange accidents befell outsiders and whispers of occult activity lingered in the Miller family estates.
+          </p>
+
+          <h3>The Phantom</h3>
+          <p>
+            Reported sightings began in 2018. Witnesses describe a figure moving with inhuman speed along the local trails, particularly near Starin Park and the Miller Memorial Grounds. The entity does not appear in daylight. The figure's features remain obscured, though accounts mention "white cloth" and "an absence where the eyes should be."
+          </p>
+
+          <h3>Pattern Recognition</h3>
+          <p>
+            Incidents cluster around autumn equinox and summer solstice. Campus security reports an uptick in student disappearances during these periods. The common factor: all missing students were last seen near the trails. All exhibits signs of acute psychological distress before vanishing.
+          </p>
+        </div>
+      </div>
+
+      <!-- TIMELINE Section -->
+      <div class="content-box timeline-section">
+        <h2 class="section-title">TIMELINE OF INCIDENTS</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">[1933]</span>
+            <p><strong>The Miller Disappearance.</strong> Three children vanish from Miller Estate. Found days later in Whitewater Woods with no memory of lost time. One child never fully recovered speech.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">[1978]</span>
+            <p><strong>Campus Reports Begin.</strong> First official report to Whitewater PD of a "tall figure" seen near campus perimeter at dusk.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">[2018-Present]</span>
+            <p><strong>Active Sightings.</strong> The Phantom reappears with increased frequency. Campus Police document 47 reports. 9 students remain missing.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">[ONGOING]</span>
+            <p><strong>Investigation Status:</strong> ACTIVE. All witnesses restricted from discussing details. Archive access limited to authorized personnel only.</p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <aside class="panel side-panel">
-      <h2>How To Edit</h2>
-      <ol>
-        <li>Open <code>movies.yaml</code>.</li>
-        <li>Add, remove, or change entries under <code>movies</code>.</li>
-        <li>Save and refresh this page.</li>
-      </ol>
-      <p class="note">Each movie supports: title, year, rating, subgenre, mood, and summary.</p>
-    </aside>
   </main>
 
-  <footer>
-    <p>Built as a simple static site for easy domain hosting.</p>
+  <!-- Footer -->
+  <footer class="archive-footer">
+    <p>-- CLASSIFIED DOCUMENT -- UNAUTHORIZED ACCESS PROHIBITED --</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>

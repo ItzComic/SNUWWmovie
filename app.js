@@ -1,45 +1,50 @@
-async function loadMovies() {
-  const grid = document.getElementById("movie-grid");
+// ============================================
+// WHITEWATER SIGHTING ARCHIVE
+// ============================================
+// 
+// DIRECTOR QUICK-EDIT GUIDE:
+// The archive content is currently embedded in index.html for fast edits between takes.
+// 
+// To modify sighting dates/locations:
+//   1. Open index.html
+//   2. Find the "RECENT SIGHTINGS" section (around line 50)
+//   3. Edit the <li> items directly
+// 
+// To modify lore text:
+//   1. Find the "THE LEGEND" section (around line 100)
+//   2. Edit the <p> tags with your new text
+//
+// To modify timeline events:
+//   1. Find the "TIMELINE OF INCIDENTS" section
+//   2. Edit the <div class="timeline-item"> blocks
+//
+// ============================================
 
-  try {
-    const response = await fetch("movies.yaml", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Could not load movies.yaml (${response.status})`);
-    }
+// Optional: Uncomment below to load dynamic sightings from movies.yaml
+// This is not currently active, but here for future expansion.
 
-    const yamlText = await response.text();
-    const parsed = jsyaml.load(yamlText);
-    const movies = Array.isArray(parsed?.movies) ? parsed.movies : [];
-
-    if (movies.length === 0) {
-      grid.innerHTML = "<p>No movies found in movies.yaml.</p>";
-      return;
-    }
-
-    grid.innerHTML = movies
-      .map((movie, index) => {
-        const title = movie.title ?? "Untitled";
-        const year = movie.year ?? "-";
-        const rating = movie.rating ?? "Unrated";
-        const subgenre = movie.subgenre ?? "Unknown";
-        const mood = movie.mood ?? "Unknown";
-        const summary = movie.summary ?? "No summary provided.";
-
-        return `
-          <article class="movie-card" style="animation-delay:${index * 80}ms">
-            <div class="movie-head">
-              <h3 class="movie-title">${title}</h3>
-              <span class="movie-year">${year}</span>
-            </div>
-            <p class="meta">${rating} | ${subgenre} | ${mood}</p>
-            <p class="summary">${summary}</p>
-          </article>
-        `;
-      })
-      .join("");
-  } catch (error) {
-    grid.innerHTML = `<p>Failed to load YAML: ${error.message}</p>`;
-  }
-}
-
-loadMovies();
+// async function loadSightings() {
+//   const sightingList = document.getElementById("sighting-list");
+//   try {
+//     const response = await fetch("movies.yaml", { cache: "no-store" });
+//     if (!response.ok) throw new Error(`Could not load movies.yaml (${response.status})`);
+//     
+//     const yamlText = await response.text();
+//     const parsed = jsyaml.load(yamlText);
+//     const sightings = Array.isArray(parsed?.sightings) ? parsed.sightings : [];
+//     
+//     sightingList.innerHTML = sightings
+//       .map(sighting => `
+//         <li class="sighting-item">
+//           <span class="sighting-date">${sighting.date}</span>
+//           <span class="sighting-text">${sighting.location}</span>
+//         </li>
+//       `)
+//       .join("");
+//   } catch (error) {
+//     console.warn("Could not load sightings:", error.message);
+//   }
+// }
+// 
+// Uncomment the line below to enable dynamic loading:
+// loadSightings();
