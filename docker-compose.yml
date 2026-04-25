@@ -1,6 +1,7 @@
 services:
   snuww-sighting-archive:
-    image: ghcr.io/itzcomic/snuwwmovie:latest
+    build:
+      context: https://github.com/ItzComic/SNUWWmovie.git
     container_name: snuww-sighting-archive
     restart: unless-stopped
     ports:
